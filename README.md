@@ -9,7 +9,8 @@ The objective is to destroy all enemy ships before they reach the bottom of the 
 
 # Screenshots
 Gameplay. Player's jet, enemy ships, rocket.
-![Gameplay](https://raw.githubusercontent.com/galaxy/master/media/game.png)
+[image](https://github.com/user-attachments/assets/f422e089-7b53-4c15-9a09-cf13957fb6e7)
+
 
 Explosion (expanding circle animation).
 ![Explosion](https://raw.githubusercontent.com/galaxy/master/media/explosion.png)
