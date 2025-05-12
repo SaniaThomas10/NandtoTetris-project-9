@@ -2,10 +2,9 @@
 
 # Galaxy - nand2tetris project 9 homework
 
-It's a space invaders clone, where player can move sideways using left or right keys,
-can fire projectiles with space key.
+The player can travel sideways with the left or right keys in this space invaders clone, and they can shoot missiles with the space key.
 
-The objective is to destroy all enemy ships before they reach the bottom of the screen.
+Taking out every enemy ship before they reach the bottom of the screen is the goal.
 
 # Screenshots
 Gameplay. Player's jet, enemy ships, rocket.
