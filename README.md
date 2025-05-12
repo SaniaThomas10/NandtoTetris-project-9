@@ -15,4 +15,5 @@ Explosion (expanding circle animation).
 ![CaptureE](https://github.com/user-attachments/assets/40c9e6ba-84ab-4146-a4c7-b03a61d60d68)
 
 Dark Souls of Space Invaders.
-![Dark Souls of Space Invaders](https://raw.githubusercontent.com/galaxy/master/media/game_over.png)
+![image](https://github.com/user-attachments/assets/1bfe0d6e-fbae-4bad-8e02-c56d1965c1cd)
+
