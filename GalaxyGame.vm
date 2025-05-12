@@ -1,0 +1,266 @@
+function GalaxyGame.new 0
+    push constant 6
+    call Memory.alloc 1
+    pop pointer 0
+    push constant 248
+    push constant 230
+    call PlayersJet.new 2
+    pop this 0
+    push constant 0
+    pop this 3
+    call BulletSet.new 0
+    pop this 1
+    call EnemySet.new 0
+    pop this 2
+    push this 2
+    call EnemySet.activate 1
+    pop temp 0
+    push pointer 0
+    return
+function GalaxyGame.dispose 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call PlayersJet.dispose 1
+    pop temp 0
+    push this 1
+    call BulletSet.dispose 1
+    pop temp 0
+    push pointer 0
+    call Memory.deAlloc 1
+    pop temp 0
+    push constant 0
+    return
+function GalaxyGame.movePlayer 0
+    push argument 0
+    pop pointer 0
+    push this 3
+    push constant 3
+    eq
+    not
+    if-goto GalaxyGame_1
+    push this 0
+    call PlayersJet.moveLeft 1
+    pop temp 0
+    goto GalaxyGame_0
+label GalaxyGame_1
+label GalaxyGame_0
+    push this 3
+    push constant 4
+    eq
+    not
+    if-goto GalaxyGame_3
+    push this 0
+    call PlayersJet.moveRight 1
+    pop temp 0
+    goto GalaxyGame_2
+label GalaxyGame_3
+label GalaxyGame_2
+    push this 3
+    push constant 0
+    gt
+    not
+    if-goto GalaxyGame_5
+    push constant 0
+    pop this 3
+    goto GalaxyGame_4
+label GalaxyGame_5
+label GalaxyGame_4
+    push constant 0
+    return
+function GalaxyGame.endGame 0
+    push argument 0
+    pop pointer 0
+    push constant 10
+    push constant 30
+    call Output.moveCursor 2
+    pop temp 0
+    push argument 1
+    call Output.printString 1
+    pop temp 0
+    push constant 0
+    return
+function GalaxyGame.run 2
+    push argument 0
+    pop pointer 0
+    push constant 0
+    pop local 1
+label GalaxyGame_6
+    push local 1
+    not
+    not
+    if-goto GalaxyGame_7
+    call Keyboard.keyPressed 0
+    pop local 0
+    push local 0
+    push constant 81
+    eq
+    not
+    if-goto GalaxyGame_9
+    push constant 1
+    neg
+    pop local 1
+    goto GalaxyGame_8
+label GalaxyGame_9
+label GalaxyGame_8
+    push local 0
+    push constant 32
+    eq
+    not
+    if-goto GalaxyGame_11
+    push this 4
+    push constant 40
+    gt
+    not
+    if-goto GalaxyGame_13
+    push constant 0
+    pop this 4
+    goto GalaxyGame_12
+label GalaxyGame_13
+    push this 4
+    push constant 0
+    eq
+    not
+    if-goto GalaxyGame_15
+    push this 1
+    push this 0
+    call PlayersJet.getX 1
+    push this 0
+    call PlayersJet.getY 1
+    push constant 16
+    sub
+    call BulletSet.fire 3
+    pop temp 0
+    goto GalaxyGame_14
+label GalaxyGame_15
+label GalaxyGame_14
+    push this 4
+    push constant 1
+    add
+    pop this 4
+label GalaxyGame_12
+    goto GalaxyGame_10
+label GalaxyGame_11
+label GalaxyGame_10
+    push local 0
+    push constant 130
+    eq
+    not
+    if-goto GalaxyGame_17
+    push constant 3
+    pop this 3
+    goto GalaxyGame_16
+label GalaxyGame_17
+label GalaxyGame_16
+    push local 0
+    push constant 132
+    eq
+    not
+    if-goto GalaxyGame_19
+    push constant 4
+    pop this 3
+    goto GalaxyGame_18
+label GalaxyGame_19
+label GalaxyGame_18
+    push this 5
+    push constant 50
+    gt
+    not
+    if-goto GalaxyGame_21
+    push constant 0
+    pop this 5
+    goto GalaxyGame_20
+label GalaxyGame_21
+    push this 5
+    push constant 0
+    eq
+    not
+    if-goto GalaxyGame_23
+    push this 2
+    call EnemySet.run 1
+    pop temp 0
+    goto GalaxyGame_22
+label GalaxyGame_23
+label GalaxyGame_22
+    push this 5
+    push constant 1
+    add
+    pop this 5
+label GalaxyGame_20
+    push pointer 0
+    call GalaxyGame.movePlayer 1
+    pop temp 0
+    push this 1
+    push this 2
+    call BulletSet.run 2
+    pop temp 0
+    push this 2
+    call EnemySet.anyAliveEnemy 1
+    not
+    not
+    if-goto GalaxyGame_25
+    push pointer 0
+    push constant 7
+    call String.new 1
+    push constant 89
+    call String.appendChar 2
+    push constant 79
+    call String.appendChar 2
+    push constant 85
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 87
+    call String.appendChar 2
+    push constant 73
+    call String.appendChar 2
+    push constant 78
+    call String.appendChar 2
+    call GalaxyGame.endGame 2
+    pop temp 0
+    push constant 1
+    neg
+    pop local 1
+    goto GalaxyGame_24
+label GalaxyGame_25
+    push this 2
+    call EnemySet.reachedEnd 1
+    not
+    if-goto GalaxyGame_27
+    push pointer 0
+    push constant 9
+    call String.new 1
+    push constant 71
+    call String.appendChar 2
+    push constant 65
+    call String.appendChar 2
+    push constant 77
+    call String.appendChar 2
+    push constant 69
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 79
+    call String.appendChar 2
+    push constant 86
+    call String.appendChar 2
+    push constant 69
+    call String.appendChar 2
+    push constant 82
+    call String.appendChar 2
+    call GalaxyGame.endGame 2
+    pop temp 0
+    push constant 1
+    neg
+    pop local 1
+    goto GalaxyGame_26
+label GalaxyGame_27
+label GalaxyGame_26
+label GalaxyGame_24
+    push constant 5
+    call Sys.wait 1
+    pop temp 0
+    goto GalaxyGame_6
+label GalaxyGame_7
+    push constant 0
+    return

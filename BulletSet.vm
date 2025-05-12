@@ -1,0 +1,646 @@
+function BulletSet.new 0
+    push constant 15
+    call Memory.alloc 1
+    pop pointer 0
+    call Bullet.new 0
+    pop this 0
+    call Bullet.new 0
+    pop this 1
+    call Bullet.new 0
+    pop this 2
+    call Bullet.new 0
+    pop this 3
+    call Bullet.new 0
+    pop this 4
+    call Bullet.new 0
+    pop this 5
+    call Bullet.new 0
+    pop this 6
+    call Bullet.new 0
+    pop this 7
+    call Bullet.new 0
+    pop this 8
+    call Bullet.new 0
+    pop this 9
+    call Bullet.new 0
+    pop this 10
+    call Bullet.new 0
+    pop this 11
+    call Bullet.new 0
+    pop this 12
+    call Bullet.new 0
+    pop this 13
+    call Bullet.new 0
+    pop this 14
+    push pointer 0
+    return
+function BulletSet.dispose 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call Bullet.dispose 1
+    pop temp 0
+    push this 1
+    call Bullet.dispose 1
+    pop temp 0
+    push this 2
+    call Bullet.dispose 1
+    pop temp 0
+    push this 3
+    call Bullet.dispose 1
+    pop temp 0
+    push this 4
+    call Bullet.dispose 1
+    pop temp 0
+    push this 5
+    call Bullet.dispose 1
+    pop temp 0
+    push this 6
+    call Bullet.dispose 1
+    pop temp 0
+    push this 7
+    call Bullet.dispose 1
+    pop temp 0
+    push this 8
+    call Bullet.dispose 1
+    pop temp 0
+    push this 9
+    call Bullet.dispose 1
+    pop temp 0
+    push this 10
+    call Bullet.dispose 1
+    pop temp 0
+    push this 11
+    call Bullet.dispose 1
+    pop temp 0
+    push this 12
+    call Bullet.dispose 1
+    pop temp 0
+    push this 13
+    call Bullet.dispose 1
+    pop temp 0
+    push this 14
+    call Bullet.dispose 1
+    pop temp 0
+    push pointer 0
+    call Memory.deAlloc 1
+    pop temp 0
+    push constant 0
+    return
+function BulletSet.run 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call Bullet.run 1
+    pop temp 0
+    push this 1
+    call Bullet.run 1
+    pop temp 0
+    push this 2
+    call Bullet.run 1
+    pop temp 0
+    push this 3
+    call Bullet.run 1
+    pop temp 0
+    push this 4
+    call Bullet.run 1
+    pop temp 0
+    push this 5
+    call Bullet.run 1
+    pop temp 0
+    push this 6
+    call Bullet.run 1
+    pop temp 0
+    push this 7
+    call Bullet.run 1
+    pop temp 0
+    push this 8
+    call Bullet.run 1
+    pop temp 0
+    push this 9
+    call Bullet.run 1
+    pop temp 0
+    push this 10
+    call Bullet.run 1
+    pop temp 0
+    push this 11
+    call Bullet.run 1
+    pop temp 0
+    push this 12
+    call Bullet.run 1
+    pop temp 0
+    push this 13
+    call Bullet.run 1
+    pop temp 0
+    push this 14
+    call Bullet.run 1
+    pop temp 0
+    push pointer 0
+    push argument 1
+    call BulletSet.handleEnemyDown 2
+    pop temp 0
+    push constant 0
+    return
+function BulletSet.fire 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_1
+    push this 0
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_0
+label BulletSet_1
+    push this 1
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_3
+    push this 1
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_2
+label BulletSet_3
+    push this 2
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_5
+    push this 2
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_4
+label BulletSet_5
+    push this 3
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_7
+    push this 3
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_6
+label BulletSet_7
+    push this 4
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_9
+    push this 4
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_8
+label BulletSet_9
+    push this 5
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_11
+    push this 5
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_10
+label BulletSet_11
+    push this 6
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_13
+    push this 6
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_12
+label BulletSet_13
+    push this 7
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_15
+    push this 7
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_14
+label BulletSet_15
+    push this 8
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_17
+    push this 8
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_16
+label BulletSet_17
+    push this 9
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_19
+    push this 9
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_18
+label BulletSet_19
+    push this 10
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_21
+    push this 10
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_20
+label BulletSet_21
+    push this 11
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_23
+    push this 11
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_22
+label BulletSet_23
+    push this 12
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_25
+    push this 12
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_24
+label BulletSet_25
+    push this 13
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_27
+    push this 13
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_26
+label BulletSet_27
+    push this 14
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_29
+    push this 14
+    push argument 1
+    push argument 2
+    call Bullet.fire 3
+    pop temp 0
+    goto BulletSet_28
+label BulletSet_29
+label BulletSet_28
+label BulletSet_26
+label BulletSet_24
+label BulletSet_22
+label BulletSet_20
+label BulletSet_18
+label BulletSet_16
+label BulletSet_14
+label BulletSet_12
+label BulletSet_10
+label BulletSet_8
+label BulletSet_6
+label BulletSet_4
+label BulletSet_2
+label BulletSet_0
+    push constant 0
+    return
+function BulletSet.isEnemyDown 4
+    push argument 0
+    pop pointer 0
+    push argument 1
+    call Bullet.getActive 1
+    not
+    not
+    if-goto BulletSet_31
+    push constant 0
+    return
+    goto BulletSet_30
+label BulletSet_31
+label BulletSet_30
+    push argument 2
+    call EnemyShip.isAlive 1
+    not
+    not
+    if-goto BulletSet_33
+    push constant 0
+    return
+    goto BulletSet_32
+label BulletSet_33
+label BulletSet_32
+    push argument 1
+    call Bullet.getX 1
+    pop local 0
+    push argument 1
+    call Bullet.getY 1
+    pop local 1
+    push argument 2
+    call EnemyShip.getX 1
+    pop local 2
+    push argument 2
+    call EnemyShip.getY 1
+    pop local 3
+    push local 1
+    push local 3
+    lt
+    not
+    if-goto BulletSet_35
+    push local 0
+    push local 2
+    push constant 18
+    sub
+    gt
+    not
+    if-goto BulletSet_37
+    push local 0
+    push local 2
+    push constant 18
+    add
+    lt
+    not
+    if-goto BulletSet_39
+    push constant 1
+    neg
+    return
+    goto BulletSet_38
+label BulletSet_39
+label BulletSet_38
+    goto BulletSet_36
+label BulletSet_37
+label BulletSet_36
+    goto BulletSet_34
+label BulletSet_35
+label BulletSet_34
+    push constant 0
+    return
+function BulletSet.kill 0
+    push argument 0
+    pop pointer 0
+    push argument 2
+    call EnemyShip.explode 1
+    pop temp 0
+    push argument 1
+    call Bullet.deactivate 1
+    pop temp 0
+    push constant 0
+    return
+function BulletSet.handleEnemyDown 0
+    push argument 0
+    pop pointer 0
+    push argument 1
+    push pointer 0
+    call EnemySet.checkIfHit 2
+    pop temp 0
+    push constant 0
+    return
+function BulletSet.handleOneEnemyDown 0
+    push argument 0
+    pop pointer 0
+    push pointer 0
+    push this 0
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_41
+    push pointer 0
+    push this 0
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_40
+label BulletSet_41
+    push pointer 0
+    push this 1
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_43
+    push pointer 0
+    push this 1
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_42
+label BulletSet_43
+    push pointer 0
+    push this 2
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_45
+    push pointer 0
+    push this 2
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_44
+label BulletSet_45
+    push pointer 0
+    push this 3
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_47
+    push pointer 0
+    push this 3
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_46
+label BulletSet_47
+    push pointer 0
+    push this 4
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_49
+    push pointer 0
+    push this 4
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_48
+label BulletSet_49
+    push pointer 0
+    push this 5
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_51
+    push pointer 0
+    push this 5
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_50
+label BulletSet_51
+    push pointer 0
+    push this 6
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_53
+    push pointer 0
+    push this 6
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_52
+label BulletSet_53
+    push pointer 0
+    push this 7
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_55
+    push pointer 0
+    push this 7
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_54
+label BulletSet_55
+    push pointer 0
+    push this 8
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_57
+    push pointer 0
+    push this 8
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_56
+label BulletSet_57
+    push pointer 0
+    push this 9
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_59
+    push pointer 0
+    push this 9
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_58
+label BulletSet_59
+    push pointer 0
+    push this 10
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_61
+    push pointer 0
+    push this 10
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_60
+label BulletSet_61
+    push pointer 0
+    push this 11
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_63
+    push pointer 0
+    push this 11
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_62
+label BulletSet_63
+    push pointer 0
+    push this 12
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_65
+    push pointer 0
+    push this 12
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_64
+label BulletSet_65
+    push pointer 0
+    push this 13
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_67
+    push pointer 0
+    push this 13
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_66
+label BulletSet_67
+    push pointer 0
+    push this 14
+    push argument 1
+    call BulletSet.isEnemyDown 3
+    not
+    if-goto BulletSet_69
+    push pointer 0
+    push this 14
+    push argument 1
+    call BulletSet.kill 3
+    pop temp 0
+    goto BulletSet_68
+label BulletSet_69
+label BulletSet_68
+label BulletSet_66
+label BulletSet_64
+label BulletSet_62
+label BulletSet_60
+label BulletSet_58
+label BulletSet_56
+label BulletSet_54
+label BulletSet_52
+label BulletSet_50
+label BulletSet_48
+label BulletSet_46
+label BulletSet_44
+label BulletSet_42
+label BulletSet_40
+    push constant 0
+    return

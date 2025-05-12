@@ -1,0 +1,351 @@
+function EnemySet.new 0
+    push constant 8
+    call Memory.alloc 1
+    pop pointer 0
+    call EnemyShip.new 0
+    pop this 0
+    call EnemyShip.new 0
+    pop this 1
+    call EnemyShip.new 0
+    pop this 2
+    call EnemyShip.new 0
+    pop this 3
+    call EnemyShip.new 0
+    pop this 4
+    call EnemyShip.new 0
+    pop this 5
+    call EnemyShip.new 0
+    pop this 6
+    call EnemyShip.new 0
+    pop this 7
+    push pointer 0
+    return
+function EnemySet.reachedEnd 0
+    push argument 0
+    pop pointer 0
+    push pointer 0
+    push this 0
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_1
+    push constant 1
+    neg
+    return
+    goto EnemySet_0
+label EnemySet_1
+    push pointer 0
+    push this 1
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_3
+    push constant 1
+    neg
+    return
+    goto EnemySet_2
+label EnemySet_3
+    push pointer 0
+    push this 2
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_5
+    push constant 1
+    neg
+    return
+    goto EnemySet_4
+label EnemySet_5
+    push pointer 0
+    push this 3
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_7
+    push constant 1
+    neg
+    return
+    goto EnemySet_6
+label EnemySet_7
+    push pointer 0
+    push this 4
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_9
+    push constant 1
+    neg
+    return
+    goto EnemySet_8
+label EnemySet_9
+    push pointer 0
+    push this 5
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_11
+    push constant 1
+    neg
+    return
+    goto EnemySet_10
+label EnemySet_11
+    push pointer 0
+    push this 6
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_13
+    push constant 1
+    neg
+    return
+    goto EnemySet_12
+label EnemySet_13
+    push pointer 0
+    push this 7
+    call EnemySet.enemyReachedEnd 2
+    not
+    if-goto EnemySet_15
+    push constant 1
+    neg
+    return
+    goto EnemySet_14
+label EnemySet_15
+label EnemySet_14
+label EnemySet_12
+label EnemySet_10
+label EnemySet_8
+label EnemySet_6
+label EnemySet_4
+label EnemySet_2
+label EnemySet_0
+    push constant 0
+    return
+function EnemySet.anyAliveEnemy 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_17
+    push constant 1
+    neg
+    return
+    goto EnemySet_16
+label EnemySet_17
+label EnemySet_16
+    push this 1
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_19
+    push constant 1
+    neg
+    return
+    goto EnemySet_18
+label EnemySet_19
+label EnemySet_18
+    push this 2
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_21
+    push constant 1
+    neg
+    return
+    goto EnemySet_20
+label EnemySet_21
+label EnemySet_20
+    push this 3
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_23
+    push constant 1
+    neg
+    return
+    goto EnemySet_22
+label EnemySet_23
+label EnemySet_22
+    push this 4
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_25
+    push constant 1
+    neg
+    return
+    goto EnemySet_24
+label EnemySet_25
+label EnemySet_24
+    push this 5
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_27
+    push constant 1
+    neg
+    return
+    goto EnemySet_26
+label EnemySet_27
+label EnemySet_26
+    push this 6
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_29
+    push constant 1
+    neg
+    return
+    goto EnemySet_28
+label EnemySet_29
+label EnemySet_28
+    push this 7
+    call EnemyShip.isAlive 1
+    not
+    if-goto EnemySet_31
+    push constant 1
+    neg
+    return
+    goto EnemySet_30
+label EnemySet_31
+label EnemySet_30
+    push constant 0
+    return
+function EnemySet.enemyReachedEnd 0
+    push argument 0
+    pop pointer 0
+    push argument 1
+    call EnemyShip.getY 1
+    push constant 229
+    gt
+    return
+function EnemySet.checkIfHit 0
+    push argument 0
+    pop pointer 0
+    push argument 1
+    push this 0
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 1
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 2
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 3
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 4
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 5
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 6
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push argument 1
+    push this 7
+    call BulletSet.handleOneEnemyDown 2
+    pop temp 0
+    push constant 0
+    return
+function EnemySet.activate 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    push constant 40
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 1
+    push constant 80
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 2
+    push constant 120
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 3
+    push constant 160
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 4
+    push constant 200
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 5
+    push constant 240
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 6
+    push constant 280
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push this 7
+    push constant 320
+    push constant 20
+    call EnemyShip.activate 3
+    pop temp 0
+    push constant 0
+    return
+function EnemySet.dispose 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 1
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 2
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 3
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 4
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 5
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 6
+    call EnemyShip.dispose 1
+    pop temp 0
+    push this 7
+    call EnemyShip.dispose 1
+    pop temp 0
+    push pointer 0
+    call Memory.deAlloc 1
+    pop temp 0
+    push constant 0
+    return
+function EnemySet.run 0
+    push argument 0
+    pop pointer 0
+    push this 0
+    call EnemyShip.run 1
+    pop temp 0
+    push this 1
+    call EnemyShip.run 1
+    pop temp 0
+    push this 2
+    call EnemyShip.run 1
+    pop temp 0
+    push this 3
+    call EnemyShip.run 1
+    pop temp 0
+    push this 4
+    call EnemyShip.run 1
+    pop temp 0
+    push this 5
+    call EnemyShip.run 1
+    pop temp 0
+    push this 6
+    call EnemyShip.run 1
+    pop temp 0
+    push this 7
+    call EnemyShip.run 1
+    pop temp 0
+    push constant 0
+    return
