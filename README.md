@@ -1,6 +1,6 @@
 # NandtoTetris-project-9
 
-# Galaxy - nand2tetris project 9 homework
+# Galaxy - nand2tetris Space Invader
 
 The player can travel sideways with the left or right keys in this space invaders clone, and they can shoot missiles with the space key.
 
